@@ -12,15 +12,22 @@
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
+    "@types/react": "~19.1.10",
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "iconv-lite": "^0.7.0",
-    "pg": "^8.16.3"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "react": "19.1.0",
+    "react-native": "0.81.5"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.9.2",
     "@types/pg": "^8.15.6",
     "prisma": "^5.20.0",

@@ -16,12 +16,13 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
     const payload = jwt.verify(
       token,
       process.env.JWT_SECRET || "dev_secret"
-    ) as AuthPayload;
+    ) as JwtPayload & { sub?: number; uid?: number };
 
-    // simpan payload pada request
+    // simpan payload pada request (token uses 'sub' field, see auth.ts)
     (req as any).auth = payload;
     return next();
-  } catch {
+  } catch (e: any) {
+    console.error("Token verification error:", e?.message || e);
     return res.status(401).json({ error: "Invalid token" });
   }
 }

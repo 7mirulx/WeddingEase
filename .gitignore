@@ -73,3 +73,22 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+
+# ---- WEDDINGEASE BACKEND & SECRETS ---- #
+
+# Server dependencies & build
+server/node_modules/
+server/dist/
+
+# Environment
+.env
+server/.env
+
+# PGAdmin / Docker generated
+*.pid
+*.pid.*
+*.log
+
+# OS
+Thumbs.db
